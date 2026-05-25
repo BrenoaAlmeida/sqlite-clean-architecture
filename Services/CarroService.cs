@@ -13,7 +13,7 @@ public class CarroService : ICarroService
         _unitOfWork = unitOfWork;
     }
 
-    public void Criar(Carro carro)
+    public Guid Criar(Carro carro)
     {
         carro.Id = Guid.NewGuid();
 
@@ -21,6 +21,8 @@ public class CarroService : ICarroService
             throw new Exception("Dados invalidos para inserção");
 
         _unitOfWork.CarroRepository.Criar(carro);
+
+        return carro.Id;
     }
 
     public void Delete(Guid id)

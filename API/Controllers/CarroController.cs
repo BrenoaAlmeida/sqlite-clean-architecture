@@ -17,7 +17,15 @@ public class CarroController : Controller
     [HttpGet]
     public ActionResult Listar()
     {
-        return View();
+        try
+        {
+            var carros = _carroService.ListarTodos();
+            return Ok(carros);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
+        }
     }
 
     [HttpGet("{id}")]
@@ -25,46 +33,49 @@ public class CarroController : Controller
     {
         return View();
     }
-    
+
     [HttpPost]
     public ActionResult Criar(Carro carro)
     {
         try
         {
-            _carroService.Criar(carro);
-            return RedirectToAction(nameof(Index));
+            var id = _carroService.Criar(carro);
+            return Ok(id);
         }
-        catch
+        catch (Exception ex)
         {
-            return View();
-        }
-    }    
+            {
+                return BadRequest(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
 
-    // POST: CarroController/Edit/5
-    [HttpPut]    
-    public ActionResult Editar(int id)
-    {
-        try
-        {
-            return RedirectToAction(nameof(Index));
-        }
-        catch
-        {
-            return View();
+            }
         }
     }
 
-    // POST: CarroController/Delete/5
-    [HttpDelete]
-    public ActionResult Excluir(int id)
-    {
-        try
+        // POST: CarroController/Edit/5
+        [HttpPut]
+        public ActionResult Editar(int id)
         {
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
         }
-        catch
+
+        // POST: CarroController/Delete/5
+        [HttpDelete]
+        public ActionResult Excluir(int id)
         {
-            return View();
+            try
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
-}

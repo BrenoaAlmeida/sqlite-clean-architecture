@@ -14,7 +14,8 @@ public class CarroRepository : ICarroRepository
 
     public void Criar(Carro carro)
     {
-        throw new NotImplementedException();
+        _context.Carros.Add(carro);
+        _context.SaveChanges();
     }
 
     public void Delete(Guid id)

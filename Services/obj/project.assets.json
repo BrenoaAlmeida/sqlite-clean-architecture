@@ -1147,11 +1147,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Services\\Services.csproj",
+      "projectUniqueName": "D:\\Projetos\\greenfield\\sqlite-test\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Services\\Services.csproj",
+      "projectPath": "D:\\Projetos\\greenfield\\sqlite-test\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\Newbie\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Services\\obj\\",
+      "outputPath": "D:\\Projetos\\greenfield\\sqlite-test\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1173,11 +1173,11 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\Model.csproj": {
-              "projectPath": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\Model.csproj"
+            "D:\\Projetos\\greenfield\\sqlite-test\\Model\\Model.csproj": {
+              "projectPath": "D:\\Projetos\\greenfield\\sqlite-test\\Model\\Model.csproj"
             },
-            "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\Repository.csproj": {
-              "projectPath": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\Repository.csproj"
+            "D:\\Projetos\\greenfield\\sqlite-test\\Repository\\Repository.csproj": {
+              "projectPath": "D:\\Projetos\\greenfield\\sqlite-test\\Repository\\Repository.csproj"
             }
           }
         }

@@ -3057,11 +3057,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\Model.csproj",
+      "projectUniqueName": "D:\\Projetos\\greenfield\\sqlite-test\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\Model.csproj",
+      "projectPath": "D:\\Projetos\\greenfield\\sqlite-test\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\Newbie\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\obj\\",
+      "outputPath": "D:\\Projetos\\greenfield\\sqlite-test\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

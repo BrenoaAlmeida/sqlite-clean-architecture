@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BfsGm1yUT84=",
+  "dgSpecHash": "PgJjCXeXOj8=",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\Repository.csproj",
+  "projectFilePath": "D:\\Projetos\\greenfield\\sqlite-test\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Newbie\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.8\\microsoft.data.sqlite.core.10.0.8.nupkg.sha512",
     "C:\\Users\\Newbie\\.nuget\\packages\\microsoft.entityframeworkcore\\10.0.8\\microsoft.entityframeworkcore.10.0.8.nupkg.sha512",

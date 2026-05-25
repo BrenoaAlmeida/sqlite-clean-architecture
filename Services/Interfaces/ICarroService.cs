@@ -4,7 +4,7 @@ namespace Services.Interfaces;
 
 public interface ICarroService
 {
-    public void Criar(Carro carro);
+    public Guid Criar(Carro carro);
 
     public void Editar(Carro carro);
 

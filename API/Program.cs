@@ -1,6 +1,7 @@
 using Model;
 using Repository;
 using Repository.Interfaces;
+using Services;
 using Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +13,8 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddModelConfiguration(builder.Configuration.GetConnectionString("MinhaConexaoSqlite") ?? string.Empty);
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<ICarroService, ICarroService>();
+builder.Services.AddScoped<ICarroRepository, CarroRepository>();
+builder.Services.AddScoped<ICarroService, CarroService>();
 
 
 var app = builder.Build();

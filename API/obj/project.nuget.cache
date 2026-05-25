@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6N8SH8uNhrU=",
+  "dgSpecHash": "xh1h9235MqU=",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\API.csproj",
+  "projectFilePath": "D:\\Projetos\\greenfield\\sqlite-test\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Newbie\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Newbie\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.4\\microsoft.aspnetcore.openapi.10.0.4.nupkg.sha512",
