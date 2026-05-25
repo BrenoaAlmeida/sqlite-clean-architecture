@@ -1,0 +1,301 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCF0A3-2FA6-4B93-ABD2-99DDC0D80C71}|Services\\Services.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\services\\carroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCF0A3-2FA6-4B93-ABD2-99DDC0D80C71}|Services\\Services.csproj|solutionrelative:services\\carroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\api\\controllers\\carrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\carrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09CCF0A3-2FA6-4B93-ABD2-99DDC0D80C71}|Services\\Services.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\services\\interfaces\\icarroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09CCF0A3-2FA6-4B93-ABD2-99DDC0D80C71}|Services\\Services.csproj|solutionrelative:services\\interfaces\\icarroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{218E3D4C-EEAF-466D-8149-7E13F472BED9}|Model\\Model.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\model\\carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218E3D4C-EEAF-466D-8149-7E13F472BED9}|Model\\Model.csproj|solutionrelative:model\\carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C64B5C5-2164-48CC-9630-ACFEEC54B205}|Repository\\Repository.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\repository\\carrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C64B5C5-2164-48CC-9630-ACFEEC54B205}|Repository\\Repository.csproj|solutionrelative:repository\\carrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\api\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C64B5C5-2164-48CC-9630-ACFEEC54B205}|Repository\\Repository.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C64B5C5-2164-48CC-9630-ACFEEC54B205}|Repository\\Repository.csproj|solutionrelative:repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C64B5C5-2164-48CC-9630-ACFEEC54B205}|Repository\\Repository.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\repository\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C64B5C5-2164-48CC-9630-ACFEEC54B205}|Repository\\Repository.csproj|solutionrelative:repository\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C64B5C5-2164-48CC-9630-ACFEEC54B205}|Repository\\Repository.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\repository\\interfaces\\icarrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C64B5C5-2164-48CC-9630-ACFEEC54B205}|Repository\\Repository.csproj|solutionrelative:repository\\interfaces\\icarrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{218E3D4C-EEAF-466D-8149-7E13F472BED9}|Model\\Model.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\model\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218E3D4C-EEAF-466D-8149-7E13F472BED9}|Model\\Model.csproj|solutionrelative:model\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{218E3D4C-EEAF-466D-8149-7E13F472BED9}|Model\\Model.csproj|d:\\projetos\\greenfield\\sqlite-test\\sql-liste-test\\model\\depdencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{218E3D4C-EEAF-466D-8149-7E13F472BED9}|Model\\Model.csproj|solutionrelative:model\\depdencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 22,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:435877946:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Carro.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\Carro.cs",
+              "RelativeDocumentMoniker": "Model\\Carro.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\Carro.cs",
+              "RelativeToolTip": "Model\\Carro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T13:48:31.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T13:26:24.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "libman.json",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\libman.json",
+              "RelativeDocumentMoniker": "API\\libman.json",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\libman.json",
+              "RelativeToolTip": "API\\libman.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-21T13:26:23.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Repository\\UnitOfWork.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\UnitOfWork.cs",
+              "RelativeToolTip": "Repository\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T13:19:00.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Repository\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "Repository\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T13:18:14.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ICarroRepository.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\Interfaces\\ICarroRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Interfaces\\ICarroRepository.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\Interfaces\\ICarroRepository.cs",
+              "RelativeToolTip": "Repository\\Interfaces\\ICarroRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T13:13:21.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICarroService.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Services\\Interfaces\\ICarroService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ICarroService.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Services\\Interfaces\\ICarroService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ICarroService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T13:10:17.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CarroController.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\Controllers\\CarroController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CarroController.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\Controllers\\CarroController.cs",
+              "RelativeToolTip": "API\\Controllers\\CarroController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T13:04:53.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CarroService.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Services\\CarroService.cs",
+              "RelativeDocumentMoniker": "Services\\CarroService.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Services\\CarroService.cs",
+              "RelativeToolTip": "Services\\CarroService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T13:03:38.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CarroRepository.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\CarroRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\CarroRepository.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Repository\\CarroRepository.cs",
+              "RelativeToolTip": "Repository\\CarroRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T13:03:23.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-20T14:18:03.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DepdencyInjection.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\DepdencyInjection.cs",
+              "RelativeDocumentMoniker": "Model\\DepdencyInjection.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\DepdencyInjection.cs",
+              "RelativeToolTip": "Model\\DepdencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:12:49.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Context.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\Context.cs",
+              "RelativeDocumentMoniker": "Model\\Context.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\Model\\Context.cs",
+              "RelativeToolTip": "Model\\Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:57:23.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Projetos\\greenfield\\sqlite-test\\sql-liste-test\\API\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "API\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:01:46.188Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
