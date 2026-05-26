@@ -4,13 +4,13 @@ namespace Services.Interfaces;
 
 public interface ICarroService
 {
-    public Guid Criar(Carro carro);
+    Task<Guid> Criar(Carro carro);
 
-    public void Editar(Carro carro);
+    Task Editar(Carro carro);
 
-    public void Delete(Guid id);
+    Task Excluir(Guid id);
 
-    public IList<Carro> ListarTodos();
+    Task<IList<Carro>> ListarTodos();
 
-    public Carro ObterPorId(Guid id);
+    Task<Carro> ObterPorId(Guid id);
 }

@@ -3,4 +3,5 @@
 public interface IUnitOfWork
 {
     ICarroRepository CarroRepository { get; }
+    Task Salvar();
 }

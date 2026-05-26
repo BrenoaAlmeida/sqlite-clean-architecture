@@ -13,35 +13,46 @@ public class CarroService : ICarroService
         _unitOfWork = unitOfWork;
     }
 
-    public Guid Criar(Carro carro)
+    public async Task<Guid> Criar(Carro carro)
     {
         carro.Id = Guid.NewGuid();
 
         if (!carro.Validar())
             throw new Exception("Dados invalidos para inserção");
 
-        _unitOfWork.CarroRepository.Criar(carro);
+        await _unitOfWork.CarroRepository.Criar(carro);
+        await _unitOfWork.Salvar();
 
         return carro.Id;
     }
 
-    public void Delete(Guid id)
+    public async Task Excluir(Guid id)
     {
-        _unitOfWork.CarroRepository.Delete(id);
+        var carro = await _unitOfWork.CarroRepository.ObterPorId(id);
+
+        if (carro.Id == Guid.Empty)
+            return;
+
+        _unitOfWork.CarroRepository.Excluir(carro);
+        await _unitOfWork.Salvar();
     }
 
-    public void Editar(Carro carro)
+    public async Task Editar(Carro carro)
     {
-        _unitOfWork.CarroRepository.Editar(carro);
+        await _unitOfWork.CarroRepository.Editar(carro);
+        await _unitOfWork.Salvar();
     }
 
-    public IList<Carro> ListarTodos()
+    public async Task<IList<Carro>> ListarTodos()
     {
-        return _unitOfWork.CarroRepository.ListarTodos();
+        return await _unitOfWork.CarroRepository.ListarTodos();
     }
 
-    public Carro ObterPorId(Guid id)
+    public async Task<Carro> ObterPorId(Guid id)
     {
-        return _unitOfWork.CarroRepository.ObterPorId(id);
+        if (id == Guid.Empty || id.Equals(string.Empty))
+            return null;
+
+        return await _unitOfWork.CarroRepository.ObterPorId(id); 
     }
 }

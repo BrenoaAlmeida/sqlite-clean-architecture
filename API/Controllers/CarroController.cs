@@ -15,11 +15,15 @@ public class CarroController : Controller
     }
 
     [HttpGet]
-    public ActionResult Listar()
+    public async Task<ActionResult> Listar()
     {
         try
         {
-            var carros = _carroService.ListarTodos();
+            var carros = await _carroService.ListarTodos();
+
+            if (carros.Count == 0)
+                return Ok("Nenhum registro foi encontrado");
+
             return Ok(carros);
         }
         catch (Exception ex)
@@ -29,53 +33,51 @@ public class CarroController : Controller
     }
 
     [HttpGet("{id}")]
-    public ActionResult Listar(int id)
+    public async Task<ActionResult> Listar(Guid id)
     {
-        return View();
+        var carro = await _carroService.ObterPorId(id);
+        return Ok(carro);
     }
 
     [HttpPost]
-    public ActionResult Criar(Carro carro)
+    public async Task<ActionResult> Criar(Carro carro)
     {
         try
         {
-            var id = _carroService.Criar(carro);
+            var id = await _carroService.Criar(carro);
             return Ok(id);
         }
         catch (Exception ex)
         {
-            {
-                return BadRequest(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
-
-            }
+            return BadRequest(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
         }
     }
-
-        // POST: CarroController/Edit/5
-        [HttpPut]
-        public ActionResult Editar(int id)
+    
+    [HttpPut]
+    public async Task<ActionResult> Editar(Carro carroAEditar)
+    {
+        try
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            await _carroService.Editar(carroAEditar);
+            return Ok(new { Messagem = $"Carro com Id {carroAEditar.Id} foi editado com sucesso" });
         }
-
-        // POST: CarroController/Delete/5
-        [HttpDelete]
-        public ActionResult Excluir(int id)
+        catch( Exception ex)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return BadRequest(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
         }
     }
+    
+    [HttpDelete("{id}")]
+    public ActionResult Excluir(Guid id)
+    {
+        try
+        {
+            _carroService.Excluir(id);
+            return Ok(new { Messagem = $"Carro com Id {id} foi excluido com sucesso" });
+        }
+        catch(Exception ex)
+        {
+            return BadRequest(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
+        }
+    }
+}

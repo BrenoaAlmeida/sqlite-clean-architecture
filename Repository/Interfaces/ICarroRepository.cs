@@ -4,13 +4,13 @@ namespace Repository.Interfaces;
 
 public interface ICarroRepository
 {
-    public void Criar(Carro carro);
+    Task Criar(Carro carro);
 
-    public void Editar(Carro carro);
+    Task Editar(Carro carro);
 
-    public void Delete(Guid id);
+    void Excluir(Carro carro);
 
-    public IList<Carro> ListarTodos();
+    Task<IList<Carro>> ListarTodos();
 
-    public Carro ObterPorId(Guid id);
+    Task<Carro> ObterPorId(Guid id);
 }

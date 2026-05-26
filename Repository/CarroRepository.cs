@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using Microsoft.EntityFrameworkCore;
+using Model;
 using Repository.Interfaces;
 
 namespace Repository;
@@ -12,29 +13,27 @@ public class CarroRepository : ICarroRepository
         _context = context;
     }
 
-    public void Criar(Carro carro)
+    public async Task Criar(Carro carro)
     {
-        _context.Carros.Add(carro);
-        _context.SaveChanges();
+        await _context.Carros.AddAsync(carro);
     }
 
-    public void Delete(Guid id)
+    public void Excluir(Carro carro)
     {
-        throw new NotImplementedException();
+        _context.Carros.Remove(carro);
     }
 
-    public void Editar(Carro carro)
+    public async Task Editar(Carro carro)
     {
-        throw new NotImplementedException();
+        var carroDoBanco = await _context.Carros.FindAsync(carro.Id);
+        carroDoBanco = carro;
+        _context.Update(carroDoBanco);
     }
 
-    public IList<Carro> ListarTodos()
+    public async Task<IList<Carro>> ListarTodos()
     {
-        return _context.Carros.ToList();
+        return await _context.Carros.ToListAsync();
     }
 
-    public Carro ObterPorId(Guid id)
-    {
-        return _context.Carros.Where(c => c.Id == id).First();
-    }
+    public async Task<Carro> ObterPorId(Guid id) => await _context.Carros.FirstOrDefaultAsync(c => c.Id == id);
 }
