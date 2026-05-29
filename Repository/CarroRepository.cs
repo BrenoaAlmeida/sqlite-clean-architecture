@@ -26,8 +26,12 @@ public class CarroRepository : ICarroRepository
     public async Task Editar(Carro carro)
     {
         var carroDoBanco = await _context.Carros.FindAsync(carro.Id);
-        carroDoBanco = carro;
-        _context.Update(carroDoBanco);
+
+        if (carroDoBanco == null)
+            throw new InvalidOperationException("Não existe Carro para o Id informado");
+
+
+        carroDoBanco.Atualizar(carro.Nome, carro.Marca, carro.Preco);
     }
 
     public async Task<IList<Carro>> ListarTodos()

@@ -1,8 +1,27 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace Model;
-public class Carro()
+
+public class Carro
 {
+    protected Carro() { }
+
+    public Carro(Guid id, string nome, string marca, double preco)
+    {
+        if (string.IsNullOrEmpty(nome))
+            throw new InvalidOperationException("Nome deve ter um valor");
+
+        if (string.IsNullOrEmpty(marca))
+            throw new InvalidOperationException("Marca deve ter um valor");
+
+        if (preco <= 0)
+            throw new InvalidOperationException("Preço não pode ser zero");
+
+        Id = id == Guid.Empty ? Guid.CreateVersion7() : id;
+        Nome = nome;
+        Marca = marca;
+        Preco = preco;
+    }
 
     [Key]
     public Guid Id { get; set; }
@@ -18,16 +37,12 @@ public class Carro()
     [MaxLength(60)]
     public string? Marca { get; set; }
 
-    public bool Validar()
+    public Carro Atualizar(string nome, string marca, double preco)
     {
+        this.Nome = nome;
+        this.Marca = marca;
+        this.Preco = preco;
 
-        if (this.Preco == 0)
-            return false;
-        
-        if(this.Id == Guid.Empty || this.Id == default)
-            return false;
-
-        return true;
-
+        return this;
     }
 }

@@ -15,11 +15,6 @@ public class CarroService : ICarroService
 
     public async Task<Guid> Criar(Carro carro)
     {
-        carro.Id = Guid.NewGuid();
-
-        if (!carro.Validar())
-            throw new Exception("Dados invalidos para inserção");
-
         await _unitOfWork.CarroRepository.Criar(carro);
         await _unitOfWork.Salvar();
 
@@ -28,10 +23,8 @@ public class CarroService : ICarroService
 
     public async Task Excluir(Guid id)
     {
-        var carro = await _unitOfWork.CarroRepository.ObterPorId(id);
+        var carro = await ObterPorId(id);
 
-        if (carro.Id == Guid.Empty)
-            return;
 
         _unitOfWork.CarroRepository.Excluir(carro);
         await _unitOfWork.Salvar();
@@ -39,6 +32,7 @@ public class CarroService : ICarroService
 
     public async Task Editar(Carro carro)
     {
+        await ObterPorId(carro.Id);
         await _unitOfWork.CarroRepository.Editar(carro);
         await _unitOfWork.Salvar();
     }
@@ -51,8 +45,13 @@ public class CarroService : ICarroService
     public async Task<Carro> ObterPorId(Guid id)
     {
         if (id == Guid.Empty || id.Equals(string.Empty))
-            return null;
+            throw new InvalidOperationException("Id não pode ser nulo");
 
-        return await _unitOfWork.CarroRepository.ObterPorId(id); 
+        var carro = await _unitOfWork.CarroRepository.ObterPorId(id);
+
+        if (carro == null)
+            throw new InvalidOperationException("Não existe registro no banco para o Id Informado");
+
+        return carro;
     }
 }
