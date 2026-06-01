@@ -1,8 +1,8 @@
-﻿using Model;
+﻿using Application.Interfaces;
+using Domain;
 using Repository.Interfaces;
-using Services.Interfaces;
 
-namespace Services;
+namespace Application;
 
 public class CarroService : ICarroService
 {
@@ -15,8 +15,8 @@ public class CarroService : ICarroService
 
     public async Task<Guid> Criar(Carro carro)
     {
-        await _unitOfWork.CarroRepository.Criar(carro);
-        await _unitOfWork.Salvar();
+        await _unitOfWork.GetRepository<Carro>().Add(carro);
+        await _unitOfWork.SalvarAsync();
 
         return carro.Id;
     }
@@ -26,20 +26,24 @@ public class CarroService : ICarroService
         var carro = await ObterPorId(id);
 
 
-        _unitOfWork.CarroRepository.Excluir(carro);
-        await _unitOfWork.Salvar();
+        _unitOfWork.GetRepository<Carro>().Delete(carro);
+        await _unitOfWork.SalvarAsync();
     }
 
     public async Task Editar(Carro carro)
-    {
-        await ObterPorId(carro.Id);
-        await _unitOfWork.CarroRepository.Editar(carro);
-        await _unitOfWork.Salvar();
+    {        
+        var carroDoBanco = await ObterPorId(carro.Id);
+
+
+        carroDoBanco.Nome = carro.Nome;
+        carroDoBanco.Marca = carro.Marca;
+        carro.Preco = carro.Preco;
+        await _unitOfWork.SalvarAsync();        
     }
 
     public async Task<IList<Carro>> ListarTodos()
     {
-        return await _unitOfWork.CarroRepository.ListarTodos();
+        return await _unitOfWork.GetRepository<Carro>().GetAll();
     }
 
     public async Task<Carro> ObterPorId(Guid id)
@@ -47,7 +51,7 @@ public class CarroService : ICarroService
         if (id == Guid.Empty || id.Equals(string.Empty))
             throw new InvalidOperationException("Id não pode ser nulo");
 
-        var carro = await _unitOfWork.CarroRepository.ObterPorId(id);
+        var carro = await _unitOfWork.GetRepository<Carro>().FindByIdAsync(id);
 
         if (carro == null)
             throw new InvalidOperationException("Não existe registro no banco para o Id Informado");

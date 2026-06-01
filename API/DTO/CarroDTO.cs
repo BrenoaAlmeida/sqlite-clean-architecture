@@ -1,4 +1,4 @@
-﻿using Model;
+﻿using Domain;
 using System.ComponentModel.DataAnnotations;
 
 namespace API.DTO;

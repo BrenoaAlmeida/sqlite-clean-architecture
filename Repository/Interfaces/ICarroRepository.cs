@@ -1,4 +1,4 @@
-﻿using Model;
+﻿using Domain;
 
 namespace Repository.Interfaces;
 
@@ -12,5 +12,5 @@ public interface ICarroRepository
 
     Task<IList<Carro>> ListarTodos();
 
-    Task<Carro> ObterPorId(Guid id);
+    Task<Carro?> ObterPorId(Guid id);
 }

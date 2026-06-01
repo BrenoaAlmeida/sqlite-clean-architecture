@@ -1,8 +1,8 @@
-using Model;
+using Application;
+using Application.Interfaces;
+using Domain;
 using Repository;
 using Repository.Interfaces;
-using Services;
-using Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddModelConfiguration(builder.Configuration.GetConnectionString("MinhaConexaoSqlite") ?? string.Empty);
+builder.Services.AddModelConfiguration(builder.Configuration);
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ICarroRepository, CarroRepository>();
 builder.Services.AddScoped<ICarroService, CarroService>();

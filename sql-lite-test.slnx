@@ -1,6 +1,6 @@
 <Solution>
   <Project Path="API/API.csproj" />
-  <Project Path="Model/Model.csproj" Id="218e3d4c-eeaf-466d-8149-7e13f472bed9" />
-  <Project Path="Repository/Repository.csproj" Id="0c64b5c5-2164-48cc-9630-acfeec54b205" />
-  <Project Path="Services/Services.csproj" Id="09ccf0a3-2fa6-4b93-abd2-99ddc0d80c71" />
+  <Project Path="Model/Domain.csproj" Id="218e3d4c-eeaf-466d-8149-7e13f472bed9" />
+  <Project Path="Repository/Infrastructure.csproj" Id="0c64b5c5-2164-48cc-9630-acfeec54b205" />
+  <Project Path="Services/Application.csproj" Id="09ccf0a3-2fa6-4b93-abd2-99ddc0d80c71" />
 </Solution>

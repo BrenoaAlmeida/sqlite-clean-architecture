@@ -1,14 +1,11 @@
-﻿using Model;
+﻿using Domain;
 using System.ComponentModel.DataAnnotations;
 
 namespace API.DTO;
 
 public class CriarCarroDTO
 {
-    public CriarCarroDTO()
-    {
-        
-    }
+    public CriarCarroDTO() { }
 
     public CriarCarroDTO(Carro carro)
     {

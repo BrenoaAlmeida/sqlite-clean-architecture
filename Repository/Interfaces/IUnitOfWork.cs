@@ -1,7 +1,9 @@
-﻿namespace Repository.Interfaces;
+﻿using Infrastructure.Interfaces;
+
+namespace Repository.Interfaces;
 
 public interface IUnitOfWork
 {
-    ICarroRepository CarroRepository { get; }
-    Task Salvar();
+    IGenericRepository<T> GetRepository<T>() where T : class;
+    Task SalvarAsync();
 }

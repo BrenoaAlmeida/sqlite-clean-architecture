@@ -1,23 +1,33 @@
-﻿using Model;
+﻿using Domain.Contexto;
+using Infrastructure;
+using Infrastructure.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Repository.Interfaces;
 
 namespace Repository;
 
 public class UnitOfWork : IUnitOfWork
-{
-    private readonly ICarroRepository _carroRepository;
-    private readonly Context _context;
+{    
+    private readonly DbContext _context;
+    private readonly Dictionary<Type, object> _repositorios = new();
 
-    public UnitOfWork(Context context, ICarroRepository carroRepository)
+    public UnitOfWork(DbContext context)
     {
-        _carroRepository = carroRepository;
         _context = context;
     }
+    
+    public async Task SalvarAsync() => await _context.SaveChangesAsync();
 
-    public async Task Salvar() 
+    public IGenericRepository<T> GetRepository<T>() where T : class
     {
-        await _context.SaveChangesAsync();
-    }
+        var tipoRepositorio = typeof(T);
 
-    public ICarroRepository CarroRepository => _carroRepository;
+        if(!_repositorios.TryGetValue(tipoRepositorio, out var repo))
+        {
+            repo = new GenericRepository<T>(_context);
+            _repositorios[tipoRepositorio] = repo;
+        }
+
+        return (IGenericRepository<T>)repo;
+    }
 }

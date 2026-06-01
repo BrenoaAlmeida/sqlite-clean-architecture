@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Model;
+﻿namespace Domain;
 
 public class Carro
 {
@@ -23,26 +21,11 @@ public class Carro
         Preco = preco;
     }
 
-    [Key]
     public Guid Id { get; set; }
 
-    [MaxLength(60)]
-    [Required]
     public string Nome { get; set; } = string.Empty;
 
-    [Required]
     public double Preco { get; set; }
 
-    [MinLength(5)]
-    [MaxLength(60)]
-    public string? Marca { get; set; }
-
-    public Carro Atualizar(string nome, string marca, double preco)
-    {
-        this.Nome = nome;
-        this.Marca = marca;
-        this.Preco = preco;
-
-        return this;
-    }
+    public string Marca { get; set; }    
 }

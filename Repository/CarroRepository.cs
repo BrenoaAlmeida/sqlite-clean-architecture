@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Model;
+﻿using Domain.Contexto;
+using Microsoft.EntityFrameworkCore;
+using Domain;
 using Repository.Interfaces;
 
 namespace Repository;
@@ -7,8 +8,8 @@ namespace Repository;
 public class CarroRepository : ICarroRepository
 {
 
-    private Context _context;
-    public CarroRepository(Context context)
+    private SqliteContext _context;
+    public CarroRepository(SqliteContext context)
     {
         _context = context;
     }
@@ -31,7 +32,9 @@ public class CarroRepository : ICarroRepository
             throw new InvalidOperationException("Não existe Carro para o Id informado");
 
 
-        carroDoBanco.Atualizar(carro.Nome, carro.Marca, carro.Preco);
+        carroDoBanco.Nome = carro.Nome;
+        carroDoBanco.Marca = carro.Marca;
+        carro.Preco = carro.Preco;
     }
 
     public async Task<IList<Carro>> ListarTodos()
@@ -39,5 +42,5 @@ public class CarroRepository : ICarroRepository
         return await _context.Carros.ToListAsync();
     }
 
-    public async Task<Carro> ObterPorId(Guid id) => await _context.Carros.FirstOrDefaultAsync(c => c.Id == id);
+    public async Task<Carro?> ObterPorId(Guid id) => await _context.Carros.FirstOrDefaultAsync(c => c.Id == id);
 }
