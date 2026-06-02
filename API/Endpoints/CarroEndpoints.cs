@@ -1,5 +1,6 @@
 ﻿using API.DTO;
 using Application.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Endpoints;
@@ -11,7 +12,7 @@ internal static class CarroEndpoints
         var root = endpoints.MapGroup("api/carro").WithTags("Carro");
 
         root.MapGet("", async (
-            [FromServices] ICarroService carroService,            
+            ICarroService carroService,
             CancellationToken cancellationToken
             ) =>
         {
@@ -27,7 +28,7 @@ internal static class CarroEndpoints
             }
             catch (Exception ex)
             {
-                return Results.BadRequest(new { Message = "Ocorreu  um erro ao processar sua requisição", stackTrace = ex.ToString() });
+                return Results.InternalServerError(new { Message = "Ocorreu  um erro ao processar sua requisição", stackTrace = ex.ToString() });
             }
         })
         .WithDescription("Endpoint que retorna uma lista de Carros")
@@ -51,12 +52,12 @@ internal static class CarroEndpoints
             }
             catch (Exception ex)
             {
-                return Results.BadRequest(new { Message = "Ocorreu  um erro ao processar sua requisição", stackTrace = ex.ToString() });
+                return Results.InternalServerError(new { Message = "Ocorreu  um erro ao processar sua requisição", stackTrace = ex.ToString() });
             }
         }).
         WithDescription("Retorna um Carro especifico baseado no Id")
         .Produces<CarroDTO>(StatusCodes.Status200OK)
-        .Produces<InvalidOperationException>(StatusCodes.Status400BadRequest)
+        .Produces<BadRequest>(StatusCodes.Status400BadRequest)
         .Produces<Exception>(StatusCodes.Status500InternalServerError);
 
         root.MapPost("", async (
@@ -73,7 +74,7 @@ internal static class CarroEndpoints
             }
             catch (Exception ex)
             {
-                return Results.BadRequest(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
+                return Results.InternalServerError(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
             }
         })
         .WithDescription("Criação de Carros")
@@ -93,7 +94,7 @@ internal static class CarroEndpoints
             }
             catch (Exception ex)
             {
-                return Results.BadRequest(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
+                return Results.InternalServerError(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
             }
         })
             .WithDescription("Edição de carro")
@@ -113,7 +114,7 @@ internal static class CarroEndpoints
             }
             catch (Exception ex)
             {
-                return Results.BadRequest(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
+                return Results.InternalServerError(new { mensagem = "Ocorreu um erro ao processar sua requisão", strackTrace = ex.ToString() });
             }
         })
             .WithDescription("Exclusão de Carro por Id")

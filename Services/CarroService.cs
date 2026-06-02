@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain;
+using Microsoft.EntityFrameworkCore;
 using Repository.Interfaces;
 
 namespace Application;
@@ -15,8 +16,8 @@ public class CarroService : ICarroService
 
     public async Task<Guid> Criar(Carro carro, CancellationToken cancellationToken)
     {
-        await _unitOfWork.GetRepository<Carro>().Add(carro, cancellationToken);
-        await _unitOfWork.SalvarAsync();
+        await _unitOfWork.GetRepository<Carro>().AddAsync(carro, cancellationToken);
+        await _unitOfWork.SalvarAsync(cancellationToken);
 
         return carro.Id;
     }
@@ -27,7 +28,7 @@ public class CarroService : ICarroService
 
 
         _unitOfWork.GetRepository<Carro>().Delete(carro);
-        await _unitOfWork.SalvarAsync();
+        await _unitOfWork.SalvarAsync(cancellationToken);
     }
 
     public async Task Editar(Carro carro, CancellationToken cancellationToken)
@@ -38,12 +39,13 @@ public class CarroService : ICarroService
         carroDoBanco.Nome = carro.Nome;
         carroDoBanco.Marca = carro.Marca;
         carro.Preco = carro.Preco;
-        await _unitOfWork.SalvarAsync();        
+        await _unitOfWork.SalvarAsync(cancellationToken);
     }
 
     public async Task<IList<Carro>> ListarTodos(CancellationToken cancellationToken)
     {
-        return await _unitOfWork.GetRepository<Carro>().GetAll(cancellationToken);
+        var query = _unitOfWork.GetRepository<Carro>().GetAll(cancellationToken);
+        return await query.ToListAsync();
     }
 
     public async Task<Carro> ObterPorId(Guid id, CancellationToken cancellationToken)

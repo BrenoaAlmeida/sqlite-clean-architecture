@@ -2,7 +2,7 @@
 
 public interface IGenericRepository<T> where T : class
 {
-    Task Add(T entity, CancellationToken cancellationToken);
+    Task AddAsync(T entity, CancellationToken cancellationToken);
 
     void Update(T entity);
 
@@ -10,5 +10,5 @@ public interface IGenericRepository<T> where T : class
 
     public void Delete(T entity);
 
-    public Task<IList<T>> GetAll(CancellationToken cancellationToken, bool asNoTracking = true);
+    public IQueryable<T> GetAll(CancellationToken cancellationToken, bool asNoTracking = true);
 }

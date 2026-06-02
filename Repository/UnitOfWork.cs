@@ -16,7 +16,7 @@ public class UnitOfWork : IUnitOfWork
         _context = context;
     }
     
-    public async Task SalvarAsync() => await _context.SaveChangesAsync();
+    public async Task SalvarAsync(CancellationToken cancellationToken) => await _context.SaveChangesAsync(cancellationToken);
 
     public IGenericRepository<T> GetRepository<T>() where T : class
     {
