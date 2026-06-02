@@ -1,3 +1,5 @@
+using API.Endpoints;
+using API.Extentions;
 using Application;
 using Application.Interfaces;
 using Domain;
@@ -13,7 +15,6 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddModelConfiguration(builder.Configuration);
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<ICarroRepository, CarroRepository>();
 builder.Services.AddScoped<ICarroService, CarroService>();
 builder.Services.AddOpenApi();
 
@@ -41,5 +42,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapEndpoints();
 
 app.Run();

@@ -13,13 +13,13 @@ public class CarroController : Controller
     {
         _carroService = carroService;
     }
-
+    
     [HttpGet]
-    public async Task<ActionResult> Listar()
+    public async Task<ActionResult> Listar(CancellationToken cancellationToken)
     {
         try
         {
-            var carros = await _carroService.ListarTodos();
+            var carros = await _carroService.ListarTodos(cancellationToken);
 
             if (carros.Count == 0)
                 return Ok("Nenhum registro foi encontrado");
@@ -36,11 +36,11 @@ public class CarroController : Controller
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult> ObterPorId(Guid id)
+    public async Task<ActionResult> ObterPorId(Guid id, CancellationToken cancellationToken)
     {
         try
         {
-            var carro = await _carroService.ObterPorId(id);
+            var carro = await _carroService.ObterPorId(id, cancellationToken);
             var carroDTO = new CarroDTO(carro);
             return Ok(carroDTO);
         }
@@ -55,12 +55,12 @@ public class CarroController : Controller
     }
 
     [HttpPost]
-    public async Task<ActionResult> Criar(CriarCarroDTO carroDTO)
+    public async Task<ActionResult> Criar(CriarCarroDTO carroDTO, CancellationToken cancellationToken)
     {
         try
         {
             var carro = CriarCarroDTO.DtoToModel(carroDTO);
-            var id = await _carroService.Criar(carro);
+            var id = await _carroService.Criar(carro, cancellationToken);
             return Created(nameof(ObterPorId), new { id });
         }
         catch (Exception ex)
@@ -70,11 +70,11 @@ public class CarroController : Controller
     }
 
     [HttpPut]
-    public async Task<ActionResult> Editar(CarroDTO carroAEditar)
+    public async Task<ActionResult> Editar(CarroDTO carroAEditar, CancellationToken cancellationToken)
     {
         try
         {
-            await _carroService.Editar(CarroDTO.DtoToModel(carroAEditar));
+            await _carroService.Editar(CarroDTO.DtoToModel(carroAEditar), cancellationToken);
             return Ok(new { Messagem = $"Carro com Id {carroAEditar.Id} foi editado com sucesso" });
         }
         catch (Exception ex)
@@ -84,11 +84,11 @@ public class CarroController : Controller
     }
 
     [HttpDelete("{id}")]
-    public ActionResult Excluir(Guid id)
+    public ActionResult Excluir(Guid id, CancellationToken cancellationToken)
     {
         try
         {
-            _carroService.Excluir(id);
+            _carroService.Excluir(id, cancellationToken);
             return Ok(new { Messagem = $"Carro com Id {id} foi excluido com sucesso" });
         }
         catch (Exception ex)
